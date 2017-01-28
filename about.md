@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 I am Ed Snider — a developer, speaker, author, and [Xamarin MVP](http://www.xamarin.com/mvp){:target="_blank"} based in the Washington D.C. / Northern Virginia area.  I have a passion for mobile design and development and regularly speak about [Xamarin](http://www.xamarin.com){:target="_blank"} and Windows app development throughout the local developer community in the D.C./Maryland/Virginia area.  I also run the [D.C. Mobile .NET Developers Group](http://www.meetup.com/dcmobiledev){:target="_blank"} ([@dcmobiledev](http://www.twitter.com/dcmobiledev){:target="_blank"}) which focuses on bringing local developers together to talk and learn about mobile development with .NET and Xamarin.
