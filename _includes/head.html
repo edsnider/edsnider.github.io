@@ -26,4 +26,8 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/atom.xml">
+
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include ga.html %}
+  {% endif %}
 </head>
