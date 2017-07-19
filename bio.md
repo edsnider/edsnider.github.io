@@ -1,0 +1,6 @@
+---
+layout: page
+title: Bio
+---
+
+Ed Snider is a senior software engineer, speaker, author, and Xamarin MVP based in the Washington DC/Northern Virginia area. He has a passion for mobile design and development and regularly speaks about Xamarin and Windows app development at local user groups and community events. Ed is also the founder and organizer of the DC area Mobile .NET Developers Group ([@dcmobiledev](http://www.twitter.com/dcmobiledev){:target="_blank"}). Ed works at [InfernoRed Technology](http://www.infernored.com){:target="_blank"} where his primary role is working with clients and partners to build awesome software solutions on the iOS, Android and Windows platforms. For the past several years he has been focused on building Windows apps and iOS and Android apps using Xamarin. Ed blogs at [edsnider.net](http://www.edsnider.net), can be found on Twitter at [twitter.com/edsnider](http://www.twitter.com/edsnider) and his book, **Mastering Xamarin.Forms**, is available at [book.sndr.io](http://book.sndr.io){:target="_blank"}.
