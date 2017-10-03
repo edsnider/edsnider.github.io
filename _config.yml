@@ -13,7 +13,7 @@ google_analytics: UA—12537982-1
 # Build settings
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
