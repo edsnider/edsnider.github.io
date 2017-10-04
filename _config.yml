@@ -3,7 +3,7 @@ tagline: Blog
 email: 
 description: > # ignore newlines until "baseurl:"
   
-baseurl: "/"
+baseurl: /
 url: "http://edsnider.net"
 twitter_username: edsnider
 github_username: edsnider
