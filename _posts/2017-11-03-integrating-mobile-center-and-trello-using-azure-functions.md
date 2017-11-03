@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Integrating Visual Studio Mobile Center and Trello using Azure Functions
+date:   2017-11-03 00:00:00 -0500
 tags: xamarin mobilecenter ci azure azurefunctions github trello devops
 excerpt_separator: <!--more-->
 ---
