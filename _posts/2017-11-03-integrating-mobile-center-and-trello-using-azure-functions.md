@@ -2,11 +2,14 @@
 layout: post
 title:  Integrating Visual Studio Mobile Center and Trello using Azure Functions
 date:   2017-11-03 00:00:00 -0500
-tags: xamarin mobilecenter ci azure azurefunctions github trello devops
+tags: xamarin mobilecenter ci azure azurefunctions github trello devops appcenter vsappcenter
 excerpt_separator: <!--more-->
 ---
 
-My current project is an awesome project. We're using Xamarin.Forms to build beautiful native iOS and Android apps. And, if that isn't awesome enough, we've totally automated the build and distribution process of these apps using [Visual Studio Mobile Center](https://www.visualstudio.com/vs/mobile-center). I absolutely love Mobile Center and how simple it makes setting up CI/CD. You can literally setup a build job in less than 5 minutes with no build host machines or any of those types of complexities that normally come with setting up CI. As you can tell I'm pretty excited we're using Mobile Center to automate the app builds and releases for this project. But there was one thing I was still having to do manually - updating the Trello board after each build. Clearly this must be automated as well!
+**UPDATE (11/15/17):** Today Microsoft [announced](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) the general availability of Visual Studio App Center. Mobile Center is now App Center.
+- - -
+
+My current project is an awesome project. We're using Xamarin.Forms to build beautiful native iOS and Android apps. And, if that isn't awesome enough, we've totally automated the build and distribution process of these apps using [Visual Studio Mobile Center](https://www.visualstudio.com/app-center/). I absolutely love Mobile Center and how simple it makes setting up CI/CD. You can literally setup a build job in less than 5 minutes with no build host machines or any of those types of complexities that normally come with setting up CI. As you can tell I'm pretty excited we're using Mobile Center to automate the app builds and releases for this project. But there was one thing I was still having to do manually - updating the Trello board after each build. Clearly this must be automated as well!
 
 <!--more-->
 
