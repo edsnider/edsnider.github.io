@@ -111,9 +111,10 @@ a.sidebar-nav-item:focus {
 }
 
 /* Added by Ed Snider */
-.sidebar img {
+.sidebar-badges img {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Sticky sidebar
