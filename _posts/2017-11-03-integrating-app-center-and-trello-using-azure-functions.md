@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  Integrating Visual Studio Mobile Center and Trello using Azure Functions
+title:  Integrating Visual Studio App Center and Trello using Azure Functions
+redirect_from: /2017/11/03/integrating-mobile-center-and-trello-using-azure-functions
 date:   2017-11-03 00:00:00 -0500
 tags: xamarin mobilecenter ci azure azurefunctions github trello devops appcenter vsappcenter
 excerpt_separator: <!--more-->
@@ -9,7 +10,7 @@ excerpt_separator: <!--more-->
 **UPDATE (11/15/17):** Today Microsoft [announced](https://blogs.msdn.microsoft.com/vsappcenter/introducing-visual-studio-app-center/) the general availability of Visual Studio App Center. Mobile Center is now App Center.
 - - -
 
-My current project is an awesome project. We're using Xamarin.Forms to build beautiful native iOS and Android apps. And, if that isn't awesome enough, we've totally automated the build and distribution process of these apps using [Visual Studio Mobile Center](https://www.visualstudio.com/app-center/). I absolutely love Mobile Center and how simple it makes setting up CI/CD. You can literally setup a build job in less than 5 minutes with no build host machines or any of those types of complexities that normally come with setting up CI. As you can tell I'm pretty excited we're using Mobile Center to automate the app builds and releases for this project. But there was one thing I was still having to do manually - updating the Trello board after each build. Clearly this must be automated as well!
+My current project is an awesome project. We're using Xamarin.Forms to build beautiful native iOS and Android apps. And, if that isn't awesome enough, we've totally automated the build and distribution process of these apps using [Visual Studio App Center](https://www.visualstudio.com/app-center/). I absolutely love App Center and how simple it makes setting up CI/CD. You can literally setup a build job in less than 5 minutes with no build host machines or any of those types of complexities that normally come with setting up CI. As you can tell I'm pretty excited we're using App Center to automate the app builds and releases for this project. But there was one thing I was still having to do manually - updating the Trello board after each build. Clearly this must be automated as well!
 
 <!--more-->
 
@@ -19,13 +20,13 @@ On this project we use Trello for managing our backlog and current work. It is a
 
 ## Enter webhooks and Azure Functions
 
-The Mobile Center team is constantly adding new capabilities making it more robust and easier to use.  
+The App Center team is constantly adding new capabilities making it more robust and easier to use.  
 
-They recently added the ability to use scripts in build definitions which was one of my number one feature requests since Mobile Center debuted. I've already started taking advantage of this feature and it's great! In fact, I initially set out to automate the process of updating Trello cards using a post-build script. Well, until I discovered a couple weeks ago that Mobile Center snuck in webhook triggers!
+They recently added the ability to use scripts in build definitions which was one of my number one feature requests since App Center debuted. I've already started taking advantage of this feature and it's great! In fact, I initially set out to automate the process of updating Trello cards using a post-build script. Well, until I discovered a couple weeks ago that App Center snuck in webhook triggers!
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">loving the ability to use build scripts in <a href="https://twitter.com/hashtag/vsmobilecenter?src=hash&amp;ref_src=twsrc%5Etfw">#vsmobilecenter</a> ! also just stumbled upon webhooks in app settings!! 😍 <a href="https://twitter.com/MobileCenter?ref_src=twsrc%5Etfw">@MobileCenter</a></p>&mdash; Ed Snider (@edsnider) <a href="https://twitter.com/edsnider/status/916336334607970305?ref_src=twsrc%5Etfw">October 6, 2017</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-As of this post, Mobile Center has the ability to trigger a webhook when a new crash group is created and/or when a new build release is available. This is perfect for solving my problem - When a new build is released I need to do something.
+As of this post, App Center has the ability to trigger a webhook when a new crash group is created and/or when a new build release is available. This is perfect for solving my problem - When a new build is released I need to do something.
 
 ### Creating a webhook triggered Azure Function
 
@@ -43,6 +44,6 @@ As you can see, this logic relies on some specific procedures, for example, incl
 
 The actual code for this Azure Function is pretty simple - just some basic pattern matching and HTTP calls. I've made the function I used available in a [Gist](https://gist.github.com/edsnider/26e95a57acb9a913589cf048278d9830).
 
-Once you've added your Azure Function the only thing you need to do is copy the function's URL and add it to a new webhook in your app's settings in Mobile Center.
+Once you've added your Azure Function the only thing you need to do is copy the function's URL and add it to a new webhook in your app's settings in App Center.
 
-{% include image.html file="/assets/postimages/mobilecenter-new-webhook.png" caption="Adding a new webhook in Mobile Center" alt="Adding a new webhook" %}
+{% include image.html file="/assets/postimages/mobilecenter-new-webhook.png" caption="Adding a new webhook in App Center" alt="Adding a new webhook" %}
