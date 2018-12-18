@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Who moved my cheese? The case of the missing launcher icon after updating an Android app"
+title:  "Fixing a missing launcher icon after updating an Android app"
+redirect_from: /2018/04/13/who-moved-my-cheese-the-case-of-the-missing-android-launcher-icon
 date:   2018-04-13 00:00:00 -0500
 tags: android xamarin xamarin.forms
 excerpt_separator: <!--more-->
