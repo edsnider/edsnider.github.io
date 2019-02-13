@@ -34,3 +34,17 @@ trigger:
 ```
 
 For more details on CI build triggers, checkout the <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/build/triggers?view=vsts&tabs=yaml" target="_blank">docs</a>.
+
+**UPDATE (2/13/19):** The Azure DevOps docs were updated on <a href="https://github.com/MicrosoftDocs/vsts-docs/commit/2614956d4a51991410df691fb867be4d3a467365#diff-b9f6d5e6b4486314d13200341675d79b" target="_blank">2/6/2019</a> with a new way of specifying <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops#trigger-builds-for-github-tags" target="_blank">build triggers for GitHub tags</a>. You can now include a `tags` section in the `trigger` section of your YAML to specify which tag names or patterns should be included or excluded from the build trigger.
+
+For example, to only trigger builds on commits to `master` or when tags that start with `v` (e.g., `v1.0.0`) are pushed:
+
+```yaml
+trigger:
+  tags:
+    include:
+    - v*
+  branches:
+    include:
+    - master
+```
